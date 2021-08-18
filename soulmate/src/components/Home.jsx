@@ -5,6 +5,10 @@ function Home(props) {
     return (
         <div>
             this is my home page
+
+            <h1>{props.shoes}</h1>
+
+           
         </div>
     );
 }

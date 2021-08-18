@@ -6,56 +6,58 @@ import NewReleases from './components/NewReleases';
 import About from './components/About';
 import Search from './components/Search';
 import Nav from './Nav';
+import { useEffect, useState } from 'react';
 
 function App() {
 
+  const [shoes, setShoes] = useState()
+    
 
-// function newReleases () {
-//   const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=15" 
+  useEffect(() => {
+    getShoes()
+  }, [])
 
-//   fetch(url)
-//       .then(response => response.json())
-//       .then(response => {
-        
-//       })
-//       .catch(console.error);
 
-// }
-  
-  
-  
-  return (
+function getShoes () {
+
+const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=25"
+
+fetch(url, {
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-key": "1cd96b09ecmsh12eaaf48c14b347p118ec2jsnc93858b4cb29",
+        "x-rapidapi-host": "v1-sneakers.p.rapidapi.com"
+    }
+})
+.then(response => response.json())
+.then(response => {
+  setShoes(response.results)
+console.log(response.results)
+})
+.catch(console.error)
+}
+
+
+
+
+    return (
     <div className="App">
-      <div className="solemate"><h1>solemate</h1></div>
+      <div><h1 className="solemate">solemate</h1></div>
       <Nav />
 
-      
+      <Route exact path="/" render={Home} shoes={shoes}/>
 
-     
-      <Route exact path="/" render={Home} />
+      <Route exact path="/about" render={About} />
 
-
-      <Route exact path="/about" render={About} /> 
-
-
-
-      
       <Route exact path="/new-releases" render={NewReleases} />
 
+     <Route exact path="/search" render={Search} />
 
 
-
-      
-      <Route exact path="/search" render={Search} />
-
-
-
-
-
-    
     </div>
-    
+
   );
 }
+
 
 export default App;
