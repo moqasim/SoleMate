@@ -7,6 +7,8 @@ import About from './components/About';
 import Search from './components/Search';
 import Nav from './Nav';
 import { useEffect, useState } from 'react';
+import Footer from './Footer/Footer';
+
 
 function App() {
 
@@ -20,7 +22,7 @@ function App() {
 
 function getShoes () {
 
-const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=25"
+const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=30"
 
 fetch(url, {
     "method": "GET",
@@ -32,7 +34,7 @@ fetch(url, {
 .then(response => response.json())
 .then(response => {
   setShoes(response.results)
-console.log(response.results)
+console.log(response)
 })
 .catch(console.error)
 }
@@ -43,15 +45,25 @@ console.log(response.results)
     return (
     <div className="App">
       <div><h1 className="solemate">solemate</h1></div>
+      <div className="Header">
       <Nav />
+      
+     
 
-      <Route exact path="/" render={Home} shoes={shoes}/>
+      <Route exact path="/" render={() => <Home  shoes={shoes}/>} />
 
       <Route exact path="/about" render={About} />
 
-      <Route exact path="/new-releases" render={NewReleases} />
+      <Route exact path="/new-releases" render={NewReleases} shoes={shoes}/>
 
      <Route exact path="/search" render={Search} />
+
+  
+     </div>
+
+     <div >
+     <Footer />
+     </div>
 
 
     </div>

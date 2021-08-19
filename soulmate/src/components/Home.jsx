@@ -1,12 +1,19 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route, useState } from "react-router-dom";
 
 function Home(props) {
+   console.log(props)
     return (
         <div>
-            this is my home page
+            
 
-            <h1>{props.shoes}</h1>
+           { props.shoes ? <h1 className="homeHeader"> {props.shoes[7].title} </h1>  : null }
+           { props.shoes ? <img className="imgHome" src={props.shoes[7].media.imageUrl} alt={props.shoes.title}/>  : null }
+            <button className="btnHome"> buy now</button> 
+           
+           
+            
+            
 
            
         </div>
