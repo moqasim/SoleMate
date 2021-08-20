@@ -1,22 +1,17 @@
-import React from 'react';
-import { useState, useEffect } from 'react-router-dom'
+import React from "react";
 
-function NewReleases(shoes) {
-    if (shoes){
-        console.log('hello',shoes)
-        return <h2>no images found</h2>
-    }
-  
-    return (
-        <div className="gallery">
-            {/* {shoes.map(item => (
-                <div key={item.title}>
-                    <img src={item.shoes.media.imageUrl} alt={item.title} />
-                    </div>
-            ))} */}
-            
+function NewReleases({ shoes }) {
+  if (!shoes) {
+    return <h2>sorry</h2>;
+  } else {
+    return shoes.map((shoe) => {
+      return (
+        <div className="shoe-div">
+          <img className="shoe-img" src={shoe.media.imageUrl} alt="" />
         </div>
-    );
+      );
+    });
+  }
 }
 
 export default NewReleases;

@@ -1,23 +1,23 @@
-import React from 'react';
-import { Route, useState } from "react-router-dom";
+import React from "react";
 
-function Home(props) {
-   console.log(props)
-    return (
-        <div>
-            
+function Home({ shoes }) {
+  const randomNum = Math.floor(Math.random() * 30);
 
-           { props.shoes ? <h1 className="homeHeader"> {props.shoes[7].title} </h1>  : null }
-           { props.shoes ? <img className="imgHome" src={props.shoes[7].media.imageUrl} alt={props.shoes.title}/>  : null }
-            <button className="btnHome"> buy now</button> 
-           
-           
-            
-            
-
-           
-        </div>
-    );
+  return (
+    <div>
+      {shoes ? (
+        <h1 className="homeHeader"> {shoes[randomNum].title} </h1>
+      ) : null}
+      {shoes ? (
+        <img
+          className="imgHome"
+          src={shoes[randomNum].media.imageUrl}
+          alt={shoes[randomNum].title}
+        />
+      ) : null}
+      <button className="btnHome"> buy now</button>
+    </div>
+  );
 }
 
 export default Home;
