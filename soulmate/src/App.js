@@ -8,16 +8,27 @@ import Nav from "./Nav";
 import { useEffect, useState } from "react";
 import Footer from "./Footer/Footer";
 import Terms from "./Footer/Terms";
+import ContactUs from "./Footer/ContactUs";
+import Privacy from "./Footer/Privacy";
+import Nike from "./components/shoes/Nike";
+import Adidas from "./components/shoes/Adidas";
+import Jordan from "./components/shoes/Jordan";
 
 function App() {
   const [shoes, setShoes] = useState();
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (id) => {
+    console.log(id);
+    setCart([...cart, id]);
+  };
 
   useEffect(() => {
     getShoes();
   }, []);
 
   function getShoes() {
-    const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=30";
+    const url = "https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=100";
 
     fetch(url, {
       method: "GET",
@@ -51,10 +62,29 @@ function App() {
           render={() => <NewReleases shoes={shoes} />}
         />
       </div>
+      <Route
+        exact
+        path="/new-releases/nike"
+        render={() => (
+          <Nike shoes={shoes} cart={cart} addToCart={addToCart} name={"Nike"} />
+        )}
+      />
+      <Route
+        exact
+        path="/new-releases/jordan"
+        render={() => <Jordan shoes={shoes} name={"Jordan"} />}
+      />
+      <Route
+        exact
+        path="/new-releases/adidas"
+        render={() => <Adidas shoes={shoes} name={"adidas"} />}
+      />
 
       <Route exact path="/search" render={Search} />
 
       <Route exact path="/terms" render={Terms} />
+      <Route exact path="/contact-us" render={ContactUs} />
+      <Route exact path="/privacy" render={Privacy} />
 
       <Footer />
     </div>
