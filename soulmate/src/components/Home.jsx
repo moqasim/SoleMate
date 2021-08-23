@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Home({ shoes }) {
+function Home({ shoes, Logout }) {
   const randomNum = Math.floor(Math.random() * 50);
   console.log(shoes);
 

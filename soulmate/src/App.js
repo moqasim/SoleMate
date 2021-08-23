@@ -80,13 +80,11 @@ function App() {
         {user.email != "" ? (
           <div className="welcome">
             <h2>
-              Welcome, <span>{user.name}</span>
+              welcome, <span>{user.name}</span>
             </h2>
             <button onClick={Logout}>Logout</button>
           </div>
-        ) : (
-          <LoginForm Login={Login} error={error} />
-        )}
+        ) : null}
       </div>
       <div>
         <h1 className="solemate">solemate</h1>
@@ -94,8 +92,16 @@ function App() {
       <div className="Header">
         <Nav />
       </div>
-      <Route exact path="/" render={() => <Home shoes={shoes} />} />
-
+      <Route
+        exact
+        path="/"
+        render={() => <LoginForm Login={Login} Log error={error} />}
+      />
+      <Route
+        exact
+        path="/home"
+        render={() => <Home shoes={shoes} Logout={Logout} />}
+      />
       <Route exact path="/about" render={About} />
 
       <div className="new-release-div">

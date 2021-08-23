@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
+import { Link } from "react-router-dom";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
@@ -50,7 +51,9 @@ function LoginForm({ Login, error }) {
             value={details.password}
           />
         </div>
-        <input type="submit" value="LOGIN" />
+        <Link className="home" to="/home">
+          <input type="submit" value="LOGIN" />{" "}
+        </Link>
       </div>
     </form>
   );
