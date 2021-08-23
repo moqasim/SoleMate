@@ -64,7 +64,7 @@ function App() {
     fetch(url, {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "1cd96b09ecmsh12eaaf48c14b347p118ec2jsnc93858b4cb29",
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
         "x-rapidapi-host": "v1-sneakers.p.rapidapi.com",
       },
     })
