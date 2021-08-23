@@ -17,6 +17,7 @@ function Jordan({ shoes, addToCart, cart, name }) {
                   src={filteredShoe.media.imageUrl}
                   alt="img"
                 />
+
                 <div className="size-div">
                   <label for="size">size</label>
                   <select id="size" name="size">

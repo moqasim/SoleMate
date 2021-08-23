@@ -5,7 +5,7 @@ function Home({ shoes }) {
   console.log(shoes);
 
   return (
-    <div>
+    <div className="home-div">
       {shoes ? (
         <h1 className="homeHeader"> {shoes[randomNum].title} </h1>
       ) : null}

@@ -1,6 +1,7 @@
 import React from "react";
 
 function Nike({ shoes, addToCart, cart, name }) {
+  console.log(shoes);
   if (!shoes) {
     return <h4>loading...</h4>;
   } else {

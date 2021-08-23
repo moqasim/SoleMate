@@ -5,7 +5,7 @@ function About(props) {
     <div>
       <div className="aboutUs"> about us</div>
       <div>
-        <p>
+        <p className="aboutUs-Div">
           established in new york city, solemate is revolutionizing sneaker
           retail as the only consignment store for rare shoes. carrying the
           rarest exclusives and collectible sneakers, consignment has evolved

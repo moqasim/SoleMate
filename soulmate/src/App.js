@@ -13,10 +13,41 @@ import Privacy from "./Footer/Privacy";
 import Nike from "./components/shoes/Nike";
 import Adidas from "./components/shoes/Adidas";
 import Jordan from "./components/shoes/Jordan";
+import LoginForm from "./components/LoginForm";
 
 function App() {
+  //
   const [shoes, setShoes] = useState();
   const [cart, setCart] = useState([]);
+  const [user, setUser] = useState({ name: "", email: "" });
+  const [error, setError] = useState("");
+
+  //
+  function Login(details) {
+    console.log(details);
+    if (
+      details.email == myAccount.email &&
+      details.password == myAccount.password
+    )
+      console.log("Logged in");
+
+    setUser({
+      name: details.name,
+      email: details.email,
+    });
+    //  } else {
+    console.log("Details dont match");
+    setError("Details dont match");
+  }
+
+  function Logout() {
+    setUser({ name: "", email: "" });
+  }
+
+  const myAccount = {
+    email: "johndoe@ga.com",
+    password: "hello123",
+  };
 
   const addToCart = (id) => {
     console.log(id);
@@ -45,6 +76,18 @@ function App() {
 
   return (
     <div className="App">
+      <div className="loginForm">
+        {user.email != "" ? (
+          <div className="welcome">
+            <h2>
+              Welcome, <span>{user.name}</span>
+            </h2>
+            <button onClick={Logout}>Logout</button>
+          </div>
+        ) : (
+          <LoginForm Login={Login} error={error} />
+        )}
+      </div>
       <div>
         <h1 className="solemate">solemate</h1>
       </div>
