@@ -14,6 +14,7 @@ import Nike from "./components/shoes/Nike";
 import Adidas from "./components/shoes/Adidas";
 import Jordan from "./components/shoes/Jordan";
 import LoginForm from "./components/LoginForm";
+import Cart from "./components/Cart";
 
 function App() {
   //
@@ -82,7 +83,9 @@ function App() {
             <h2>
               welcome, <span>{user.name}</span>
             </h2>
-            <button onClick={Logout}>Logout</button>
+            <button className="logoutbtn" onClick={Logout}>
+              LOGOUT
+            </button>
           </div>
         ) : null}
       </div>
@@ -129,7 +132,7 @@ function App() {
         render={() => <Adidas shoes={shoes} name={"adidas"} />}
       />
 
-      <Route exact path="/search" render={Search} />
+      <Route exact path="/cart" render={Cart} />
 
       <Route exact path="/terms" render={Terms} />
       <Route exact path="/contact-us" render={ContactUs} />

@@ -44,14 +44,15 @@ p {
 
 .footer-div {
   width: 100%;
-  height: 40%;
-  background-color: white;
+  height: 100px;
+  background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-size: 100% 100%;
   vertical-align: middle;
-  margin-top: 600px;
+  margin-top: 500px;
+  color: white;
 }
 .homeHeader {
   color: red;
@@ -81,8 +82,15 @@ p {
   font-family: "Orbitron", sans-serif;
   transition: 1s;
 }
-.home {
+.home,
+.about,
+.new-releases {
   color: red;
+  background-color: white;
+  border: none;
+  font-size: larger;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
 }
 
 .new-release-div {
@@ -132,4 +140,44 @@ p {
   font-size: large;
   color: black;
   font-family: "Yomogi", cursive;
+}
+.cartLogo {
+  max-width: 30px;
+  max-height: 30px;
+}
+.cartLogobtn {
+  background-color: white;
+  border: none;
+}
+.home-div {
+  margin-top: 10%;
+}
+.nike {
+  color: black;
+  font-family: "Anton", sans-serif;
+}
+.cartDiv {
+  border: black 5px;
+  background-color: white;
+  align-items: center;
+}
+.cartbtn {
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  margin-top: 50px;
+  font-size: xx-large;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.cartStyle {
+  background-color: white;
+  max-width: fit-content;
+  align-items: center;
+  border: 2px black solid;
+  margin: auto;
+  margin-top: 10%;
 }

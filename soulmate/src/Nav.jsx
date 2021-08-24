@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import shoppingcart from "./shoppingcart.png";
 
 function Nav({ Logout }) {
   return (
@@ -22,8 +23,17 @@ function Nav({ Logout }) {
         </div>
         <div className="login-div">
           <Link className="home" to="/">
-            <button onClick={Logout}>Logout</button>
+            <button className="logoutbtn" onClick={Logout}>
+              logout
+            </button>
           </Link>
+        </div>
+        <div className="cartlogoDiv">
+          <button className="cartLogobtn">
+            <Link to="/cart">
+              <img className="cartLogo" src={shoppingcart} alt="cart" />
+            </Link>
+          </button>
         </div>
       </div>
     </nav>
