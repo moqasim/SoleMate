@@ -6,7 +6,7 @@ function Jordan({ shoes, addToCart, cart, name }) {
   } else {
     return (
       <div>
-        <h1>jordan</h1>
+        <h1 className="jordan-font">J O R D A N</h1>
         {shoes
           .filter((shoe) => shoe.brand === name)
           .map((filteredShoe) => {

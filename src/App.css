@@ -108,9 +108,13 @@ p {
 }
 
 .contactUsContainer {
+  background-color: white;
+  max-width: fit-content;
   align-items: center;
-  display: flex;
-  margin-left: 40%;
+  border: 2px black solid;
+  margin: auto;
+  margin-top: 10%;
+  padding: 50px;
 }
 
 .logos {
@@ -156,6 +160,10 @@ p {
   color: black;
   font-family: "Anton", sans-serif;
 }
+.jordan-font {
+  color: black;
+  font-family: "Oswald", sans-serif;
+}
 .cartDiv {
   border: black 5px;
   background-color: white;
@@ -180,4 +188,7 @@ p {
   border: 2px black solid;
   margin: auto;
   margin-top: 10%;
+}
+.privacy-div {
+  margin-top: 100px;
 }
