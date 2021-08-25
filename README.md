@@ -13,3 +13,10 @@ I want my users to appreciate a simple outline and design navigating through the
 <img width="2559" alt="Screen Shot 2021-08-24 at 9 30 28 PM" src="https://user-images.githubusercontent.com/86312880/130711416-33e7fd5b-eba2-4aa7-982b-64165b5dcb6b.png">
 <img width="2552" alt="Screen Shot 2021-08-24 at 9 30 52 PM" src="https://user-images.githubusercontent.com/86312880/130711447-f66945b7-1a4a-4deb-8e9d-b161ca3c8515.png">
 
+
+<img width="531" alt="Screen Shot 2021-08-24 at 9 32 03 PM" src="https://user-images.githubusercontent.com/86312880/130711612-953877ba-ef7f-4732-b489-a8cce577ddc3.png">
+ This was the log in function! 
+ 
+ <img width="525" alt="Screen Shot 2021-08-24 at 9 33 11 PM" src="https://user-images.githubusercontent.com/86312880/130711672-5b82684e-8087-4b39-8db2-0f116ccf802f.png">
+This is the data i was fetching from the API https://rapidapi.com/tg4-solutions-tg4-solutions-default/api/v1-sneakers
+
