@@ -3,7 +3,7 @@ React application to buy shoes rendered via 3rd party API
 
 solemte is an e-commerce web-app that allows users to browse through different brands of shoes and eventually checkout in the future.
 
-users will have to first log in with anyname they'd like but the email is set to "johndoe@gma.com" and the password is "hello123". once in the app you can navigate between the different components. 
+users will have to first log in with anyname they'd like but the email is set to "johndoe@ga.com" and the password is "hello123". once in the app you can navigate between the different components. 
 
 I want my users to appreciate a simple outline and design navigating through the app. As a user i want to be able to see multiple brands and be able to see the issue with different sizes.
 
